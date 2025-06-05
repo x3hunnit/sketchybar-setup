@@ -3,9 +3,9 @@
 IP=$(curl -s https://ipinfo.io/ip)
 LOCATION_JSON=$(curl -s https://ipinfo.io/$IP/json)
 
-LOCATION="$(echo $LOCATION_JSON | jq '.city' | tr -d '"')"
-REGION="$(echo $LOCATION_JSON | jq '.region' | tr -d '"')"
-COUNTRY="$(echo $LOCATION_JSON | jq '.country' | tr -d '"')"
+LOCATION="Moscow"
+REGION="Moscow"
+COUNTRY="RU"
 
 # Line below replaces spaces with +
 LOCATION_ESCAPED="${LOCATION// /+}+${REGION// /+}"
